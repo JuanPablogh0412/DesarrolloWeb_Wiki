@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Contáctenos</h1>
+    <p>Ingrese sus datos para ponerse en contacto con el equipo desarrollador</p>
+    <b><label for="Nombres">Nombres</label></b>
+    <input type="text" id="Nombres">
+    <p hidden id="error1_nombre">Rellene este campo</p>
+    <p hidden id="error2_nombre">Excede el maximo de caracteres</p>
+    <br>
+    <b><label for="Apellidos">Apellidos</label></b>
+    <input type="text" id="Apellidos">
+    <p hidden id="error1_apellido">Rellene este campo</p>
+    <p hidden id="error2_apellido">Excede el maximo de caracteres</p>
+    <br>
+    <b><label for="Correo">Correo</label></b>
+    <input type="text" id="Correo">
+    <p hidden id="error1_correo">Rellene este campo</p>
+    <p hidden id="error2_correo">No cumple el formato de correo (@, ., No caracteres especiales)</p>
+    <br>
+    <b><label for="Semestre">Semestre</label></b>
+    <input type="text" id="Semestre">
+    <p hidden id="error1_semestre">Rellene este campo</p>
+    <p hidden id="error2_semestre">Informacion invalida</p>
+    <br>
+    <b><label for="Descripción">Descripción</label></b>
+    <input type="text" id="Descripcion">
+    <p hidden id="error1_descrip">Rellene este campo</p>
+    <p hidden id="error2_descrip">Excede el maximo de caracteres</p>
+    <br>
+    <input type="button" value="Enviar" id="button">
+
+    <script src="/scriptContactenos.js"></script>
+</body>
+</html>
