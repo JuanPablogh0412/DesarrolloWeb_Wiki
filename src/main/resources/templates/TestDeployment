@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pruebas y Despliegue</title>
+</head>
+<body>
+    <h1 id="titulo">Documentación de Pruebas y Despliegue</h1>
+    <p>Ingrese los datos correspondientes a las pruebas y despliegue.</p>
+
+    <b><label for="Pruebas">Casos de Pruebas</label></b>
+    <input type="text" id="Pruebas">
+    <p hidden id="error1_pruebas">Rellene este campo</p>
+    <p hidden id="error2_pruebas">Excede el máximo de caracteres</p>
+    <br>
+
+    <b><label for="Frontend">Casos de Pruebas Frontend</label></b>
+    <input type="text" id="Frontend">
+    <p hidden id="error1_frontend">Rellene este campo</p>
+    <p hidden id="error2_frontend">Excede el máximo de caracteres</p>
+    <br>
+
+    <b><label for="Backend">Casos de Pruebas Backend</label></b>
+    <input type="text" id="Backend">
+    <p hidden id="error1_backend">Rellene este campo</p>
+    <p hidden id="error2_backend">Excede el máximo de caracteres</p>
+    <br>
+
+    <b><label for="Versiones">Versiones</label></b>
+    <input type="text" id="Versiones">
+    <p hidden id="error1_versiones">Rellene este campo</p>
+    <p hidden id="error2_versiones">Información inválida</p>
+    <br>
+
+    <input type="button" value="Guardar" id="button">
+
+    <script src="/scriptPruebasDespliegue.js"></script>
+</body>
+</html>
