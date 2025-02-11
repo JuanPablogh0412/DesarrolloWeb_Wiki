@@ -1,45 +1,60 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/estiloContactenos.css">
 </head>
 <body>
-    <h1 id="titulo">Contáctenos</h1>
-    <p>Ingrese sus datos para ponerse en contacto con el equipo desarrollador</p>
+    <div class="container">
+        <h1>Contáctenos</h1>
+        <p>Ingrese sus datos para ponerse en contacto con el equipo desarrollador</p>
+        
+        <div th:if="${mensajeExito}" class="mensaje-exito">
+            <p th:text="${mensajeExito}"></p>
+        </div>
 
-    <b><label for="Nombres">Nombres</label></b>
-    <input type="text" id="Nombres">
-    <p hidden id="error1_nombre">Rellene este campo</p>
-    <p hidden id="error2_nombre">Excede el máximo de caracteres</p>
-    <br>
+        <form id="contactForm" th:action="@{/controladores/contactenos}" th:object="${contacto}" method="post">
+            <div class="form-group">
+                <label for="Nombres">NOMBRES</label>
+                <input type="text" id="Nombres" th:field="*{nombres}">
+                <p class="error-message" hidden id="error1_nombre">Rellene este campo</p>
+                <p class="error-message" hidden id="error2_nombre">Excede el máximo de caracteres</p>
+            </div>
 
-    <b><label for="Apellidos">Apellidos</label></b>
-    <input type="text" id="Apellidos">
-    <p hidden id="error1_apellido">Rellene este campo</p>
-    <p hidden id="error2_apellido">Excede el máximo de caracteres</p>
-    <br>
+            <div class="form-group">
+                <label for="Apellidos">APELLIDOS</label>
+                <input type="text" id="Apellidos" th:field="*{apellidos}">
+                <p class="error-message" hidden id="error1_apellido">Rellene este campo</p>
+                <p class="error-message" hidden id="error2_apellido">Excede el máximo de caracteres</p>
+            </div>
 
-    <b><label for="Correo">Correo</label></b>
-    <input type="text" id="Correo">
-    <p hidden id="error1_correo">Rellene este campo</p>
-    <p hidden id="error2_correo">No cumple el formato de correo (@, ., No caracteres especiales)</p>
-    <br>
+            <div class="form-group">
+                <label for="Correo">CORREO ELECTRÓNICO</label>
+                <input type="text" id="Correo" th:field="*{correo}">
+                <p class="error-message" hidden id="error1_correo">Rellene este campo</p>
+                <p class="error-message" hidden id="error2_correo">No cumple el formato de correo</p>
+            </div>
 
-    <b><label for="Semestre">Semestre</label></b>
-    <input type="text" id="Semestre">
-    <p hidden id="error1_semestre">Rellene este campo</p>
-    <p hidden id="error2_semestre">Información inválida</p>
-    <br>
+            <div class="form-group">
+                <label for="Semestre">SEMESTRE</label>
+                <input type="text" id="Semestre" th:field="*{semestre}">
+                <p class="error-message" hidden id="error1_semestre">Rellene este campo</p>
+                <p class="error-message" hidden id="error2_semestre">Información inválida</p>
+            </div>
 
-    <b><label for="Descripcion">Descripción</label></b>
-    <input type="text" id="Descripcion">
-    <p hidden id="error1_descrip">Rellene este campo</p>
-    <p hidden id="error2_descrip">Excede el máximo de caracteres</p>
-    <br>
+            <div class="form-group">
+                <label for="Descripcion">DESCRIPCIÓN</label>
+                <input type="text" id="Descripcion" th:field="*{descripcion}">
+                <p class="error-message" hidden id="error1_descrip">Rellene este campo</p>
+                <p class="error-message" hidden id="error2_descrip">Excede el máximo de caracteres</p>
+            </div>
 
-    <input type="button" value="Enviar" id="button">
+            <input type="submit" value="ENVIAR MENSAJE" id="button">
+        </form>
+    </div>
 
     <script src="/scriptContactenos.js"></script>
 </body>
