@@ -18,6 +18,17 @@ public class controllers {
     @Autowired
     private ContactoRepository contactoRepository;
 
+    @GetMapping("/Portada")
+    public String portada(){
+        return "Portada";
+    }
+
+    @GetMapping("/Descripcion")
+    public String descripcion() {
+        return "Descripcion";
+    }
+    
+
     @GetMapping("requerimientos")
     public ModelAndView requerimientos() {
         return new ModelAndView("requerimientos");
