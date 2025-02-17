@@ -33,6 +33,10 @@ public class controllers {
     public ModelAndView requerimientos() {
         return new ModelAndView("requerimientos");
     }
+    @GetMapping("/arquitectura")
+    public ModelAndView arquitectura() {
+        return new ModelAndView("arquitectura");
+    }
 
     @GetMapping("/contactenos")
     public ModelAndView contactenos(@RequestParam(required = false) String exito) {
