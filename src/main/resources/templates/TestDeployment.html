@@ -3,38 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Pruebas y Despliegue</title>
+    <title>Documentación de Pruebas y Despliegue</title>
+    <link rel="stylesheet" href="/estiloRequerimientos.css">
+    <script defer src="/scriptPruebasDespliegue.js"></script>
+    <style>
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .resultado {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-left: 5px solid #3498db;
+            min-height: 50px;
+        }
+    </style>
 </head>
 <body>
     <h1 id="titulo">Documentación de Pruebas y Despliegue</h1>
-    <p>Ingrese los datos correspondientes a las pruebas y despliegue.</p>
-
-    <b><label for="Pruebas">Casos de Pruebas</label></b>
-    <input type="text" id="Pruebas">
-    <p hidden id="error1_pruebas">Rellene este campo</p>
-    <p hidden id="error2_pruebas">Excede el máximo de caracteres</p>
-    <br>
-
-    <b><label for="Frontend">Casos de Pruebas Frontend</label></b>
-    <input type="text" id="Frontend">
-    <p hidden id="error1_frontend">Rellene este campo</p>
-    <p hidden id="error2_frontend">Excede el máximo de caracteres</p>
-    <br>
-
-    <b><label for="Backend">Casos de Pruebas Backend</label></b>
-    <input type="text" id="Backend">
-    <p hidden id="error1_backend">Rellene este campo</p>
-    <p hidden id="error2_backend">Excede el máximo de caracteres</p>
-    <br>
-
-    <b><label for="Versiones">Versiones</label></b>
-    <input type="text" id="Versiones">
-    <p hidden id="error1_versiones">Rellene este campo</p>
-    <p hidden id="error2_versiones">Información inválida</p>
-    <br>
-
-    <input type="button" value="Guardar" id="button">
-
-    <script src="/scriptPruebasDespliegue.js"></script>
+    <p>En esta sección se documentan las pruebas realizadas sobre el sistema, describiendo los escenarios de prueba y su impacto en la estabilidad del software.</p>
+    
+    <h2>Casos de Prueba</h2>
+    
+    <h3>Pruebas Generales</h3>
+    <p>Las pruebas generales verifican la estabilidad del sistema en distintos escenarios, como carga de usuarios y rendimiento bajo alta demanda.</p>
+    <div class="resultado" id="resultadoGeneral">(Espacio reservado para resultados)</div>
+    
+    <h3>Pruebas de Frontend</h3>
+    <p>Evalúan la correcta visualización y funcionamiento de la interfaz de usuario, asegurando que los elementos interactivos respondan adecuadamente.</p>
+    <div class="resultado" id="resultadoFrontend">(Espacio reservado para resultados)</div>
+    
+    <h3>Pruebas de Backend</h3>
+    <p>Validan la lógica del servidor, asegurando que las API y la base de datos operen de manera óptima y segura.</p>
+    <div class="resultado" id="resultadoBackend">(Espacio reservado para resultados)</div>
+    
+    <h2>Versionamiento del Sistema</h2>
+    <p>El control de versiones permite rastrear cambios y mejoras en el software. Ingrese la versión a desplegar para obtener detalles de los cambios realizados:</p>
+    
+    <b><label for="Versiones">Versión del Despliegue</label></b>
+    <input type="text" id="Versiones" placeholder="Ejemplo: v1.2.0">
+    
+    <div class="resultado" id="resultadoVersion">(Espacio reservado para detalles de versionamiento)</div>
 </body>
 </html>
