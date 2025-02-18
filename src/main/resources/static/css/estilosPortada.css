@@ -1,0 +1,38 @@
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+ol{
+    text-align: center;
+}
+ol p{
+    font-size: small;
+}
+.contenedor{
+    width: 60%;
+    flex-direction: row;
+    display: flex;
+    margin:0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    
+}
+.contenedor2{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+.contenedor3{
+    width: 15%;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    font-size: 20px;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+}

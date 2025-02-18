@@ -1,0 +1,12 @@
+h1{
+    padding-top: 20%;
+    text-align: center;
+}
+p{
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+}

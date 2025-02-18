@@ -18,12 +18,27 @@ public class controllers {
     @Autowired
     private ContactoRepository contactoRepository;
 
-    @GetMapping("requerimientos")
+    @GetMapping("/")
+    public String portada(){
+        return "Portada";
+    }
+
+    @GetMapping("/Descripcion")
+    public String descripcion() {
+        return "Descripcion";
+    }
+    
+
+    @GetMapping("/requerimientos")
     public ModelAndView requerimientos() {
         return new ModelAndView("requerimientos");
     }
+    @GetMapping("/arquitectura")
+    public ModelAndView arquitectura() {
+        return new ModelAndView("arquitectura");
+    }
 
-    @GetMapping("contactenos")
+    @GetMapping("/contactenos")
     public ModelAndView contactenos(@RequestParam(required = false) String exito) {
         ModelAndView modelAndView = new ModelAndView("contactenos");
         modelAndView.addObject("contacto", new Contacto());
@@ -33,7 +48,7 @@ public class controllers {
         return modelAndView;
     }
 
-    @PostMapping("contactenos")
+    @PostMapping("/contactenos")
     public ModelAndView procesarContactenos(Contacto contacto) {
         contactoRepository.save(contacto);
         return new ModelAndView("redirect:/controladores/contactenos?exito");
