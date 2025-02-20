@@ -37,6 +37,12 @@ public class controllers {
     public ModelAndView arquitectura() {
         return new ModelAndView("arquitectura");
     }
+
+    @GetMapping("/desarrollo")
+    public ModelAndView desarrollo() {
+        return new ModelAndView("DesarrolloDespliegue");
+    }
+
     @GetMapping("/pruebas")
     public ModelAndView pruebas() {
         return new ModelAndView("TestDeployment");
